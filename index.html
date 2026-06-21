@@ -424,13 +424,13 @@ function labelTarifario(st){
 function generateReport(){
   const lines = [];
   const g = GARITAS[state.garita];
-  lines.push('Checklist diario de funcionamiento de carriles');
+  lines.push('Checklist visual diario de funcionamiento de carriles');
   lines.push('Xochi, Corredor de las Flores');
   lines.push('Departamento de IT');
   lines.push('Garita: ' + g.name);
   lines.push('Fecha: ' + state.fecha);
   lines.push('Técnico IT: ' + (state.operador || '(sin especificar)'));
-  lines.push('Sup. Operación : ' + (state.supervisor || '(sin especificar)'));
+  lines.push('Sup. Operación: ' + (state.supervisor || '(sin especificar)'));
   lines.push('');
   lines.push('TARIFARIOS');
   Object.keys(state.tarifarios).sort().forEach((id,i)=>{
@@ -462,7 +462,7 @@ function generateReport(){
   lines.push('Firma Técnico IT : ' + (state.operador || '_______________________'));
   lines.push('Firma Sup. Operación : ' + (state.supervisor || '_______________________'));
   lines.push('');
-  lines.push('— Generado desde Checklist Digital de Peaje');
+  lines.push('— Generado desde Checklist Digital de Carriles');
   return lines.join('\n');
 }
 
@@ -490,7 +490,7 @@ function generatePDF(){
   doc.setFont('helvetica','bold');
   doc.setFontSize(14);
   doc.setTextColor(...NAVY);
-  doc.text('CHECKLIST VISUAL DIARIO DEL FUNCIONAMIENTO DE CARRRILES', margin + 42, y + 8);
+  doc.text('CheckList visual del funcionamiento de Carriles', margin + 42, y + 8);
   doc.setFontSize(10.5);
   doc.setFont('helvetica','normal');
   doc.setTextColor(...GRAY);
