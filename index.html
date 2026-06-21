@@ -305,7 +305,7 @@ function renderTopbar(){
       <div class="brand">
         <div class="brand-mark"><img src="${LOGO_BASE64}" alt="Logo"></div>
         <div>
-          <div class="brand-title">Checklist visual diario del funcionamiento de carriles</div>
+          <div class="brand-title">Checklist visual del funcionamiento de carriles</div>
           <div class="brand-sub">Xochi, Corredor de las Flores</div>
           <div class="brand-sub">Departamento de IT</div>
         </div>
@@ -424,7 +424,7 @@ function labelTarifario(st){
 function generateReport(){
   const lines = [];
   const g = GARITAS[state.garita];
-  lines.push('Checklist visual diario de funcionamiento de carriles');
+  lines.push('Checklist visual del funcionamiento de carriles');
   lines.push('Xochi, Corredor de las Flores');
   lines.push('Departamento de IT');
   lines.push('Garita: ' + g.name);
@@ -488,7 +488,7 @@ function generatePDF(){
     doc.addImage(LOGO_BASE64, 'PNG', margin, y, 34, 34*101/263);
   }catch(e){}
   doc.setFont('helvetica','bold');
-  doc.setFontSize(14);
+  doc.setFontSize(13);
   doc.setTextColor(...NAVY);
   doc.text('CheckList visual del funcionamiento de Carriles', margin + 42, y + 8);
   doc.setFontSize(10.5);
