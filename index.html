@@ -519,7 +519,7 @@ function generatePDF(){
   doc.setFont('helvetica','bold');
   doc.text('Sup. Operación:', margin, y);
   doc.setFont('helvetica','normal');
-  doc.text(state.supervisor || '(sin especificar)', margin + 28, y);
+  doc.text(state.supervisor || '(sin especificar)', margin + 35, y);
   y += 9;
 
   // Tarifarios
@@ -632,7 +632,7 @@ function generatePDF(){
   doc.setFontSize(8.5);
   doc.setTextColor(...GRAY);
   doc.text('Técnico IT', margin, sigLineY + 5);
-  doc.text('Sup. Operación', sigRightX, sigLineY + 20);
+  doc.text('Sup. Operación', sigRightX, sigLineY + 5);
   y = sigLineY + 12;
 
   // Footer on every page
